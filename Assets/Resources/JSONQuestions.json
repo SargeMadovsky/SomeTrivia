@@ -1,0 +1,9 @@
+{
+    "questions" : [  
+    {    "question" : "Айваседапур",    "correctAnswer" : "Топоним",    "dummyAnswers" : ["Демон"]  }, 
+    {    "question" : "Тэульханнаваам",    "correctAnswer" : "Топоним",    "dummyAnswers" : ["Демон"]  }, 
+    {    "question" : "Кэмпэлээх",    "correctAnswer" : "Топоним",    "dummyAnswers" : ["Демон"]  }, 
+    {    "question" : "Лонг-Юган",    "correctAnswer" : "Топоним",    "dummyAnswers" : ["Демон"]  }, 
+    {    "question" : "Арджай-Мохон",    "correctAnswer" : "Топоним",    "dummyAnswers" : ["Демон"]  }
+    ]
+}
