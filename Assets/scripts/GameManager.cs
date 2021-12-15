@@ -143,23 +143,31 @@ public class GameManager : MonoBehaviour {
 			startButton.interactable = false;
 
 			// check if player got a high score
-			for(int i = 0; i <= 4; i++)
-			{
-				if(scoreValue > HighScoreTracker.highScoreTracker.getHighScore(i).getScore())
-				{
-					panel3.SetActive(true);
-					break;
-				}
-			}
-
-			// if no high score, pop up the normal end of game screen
-			panel2.SetActive(true);
+			CheckHighScore();
 		}
-
-		if(questionList.Count == 0)
+		else if(questionList.Count == 0)
 		{
 			panel4.SetActive(true);
+			startButton.interactable = false;
 		}
+	}
+
+	public void CheckHighScore()
+    {
+		if (panel4.activeSelf)
+			panel4.SetActive(false);
+
+		for (int i = 0; i <= 4; i++)
+		{
+			if (scoreValue > HighScoreTracker.highScoreTracker.getHighScore(i).getScore())
+			{
+				panel3.SetActive(true);
+				break;
+			}
+		}
+
+		// if no high score, pop up the normal end of game screen
+		panel2.SetActive(true);
 	}
 
 	public void RecordHighScore()
@@ -228,7 +236,8 @@ public class GameManager : MonoBehaviour {
 
 		if(questionList.Count == 0)
 		{
-			panel4.SetActive(false);
+			panel4.SetActive(true);
+			startButton.interactable = false;
 		}
 
 
